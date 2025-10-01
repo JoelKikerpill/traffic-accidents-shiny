@@ -1,0 +1,42 @@
+<div style="font-size: 16px;">
+    <h5>Projekti eesmärk:</h5>
+    <p>
+        Projekti eesmärgiks oli koostada interaktiivne rakendus, mis kuvab kaardil Eestis toimunud kannatanutega liiklusõnnetusi ja võimaldab neid erinevate tunnuste järgi filtreerida. Rakendus võimaldab kasutajatel analüüsida kannatanutega õnnetuste mustreid ajas, ruumis ning sõltuvalt mõjuteguritest. Andmestik pärineb Eesti avaandmete portaalist ja kannab nime
+        <a href="https://avaandmed.eesti.ee/datasets/inimkannatanutega-liiklusonnetuste-andmed?fbclid=IwY2xjawJ13KxleHRuA2FlbQIxMAABHsyRARZ_l-jsHLY1oJyG2eb51WNvlJ-162AIfJUr4AaUSahvSifi-5MuVaWm_aem_32vE_SNShaLSS7lnChG4WA" target="_blank">Inimkannatanutega liiklusõnnetuste andmed</a>.
+        Kasutatud on andmeid aastatest 2011-2025.
+    </p>
+
+    <h5>Andmete töötlus:</h5>
+    <p>
+        Algandmed loeti sisse CSV-formaadis otse Eesti avaandmete portaalist. Tulpade valikul eemaldati veerud, mis ei olnud seotud visualiseeritava infoga (näiteks tüüpandmed, teede detailinfo veerud jne). Andmestik ühtlustati ja korrastati. Algandmete koordinaadid olid süsteemis EPSG:3301, mis teisendati Leafleti kaardiga töötamiseks sobivasse EPSG:4326 süsteemi. Andmete puhastamise käigus eemaldati tühjade väärtustega read ning read, mille koordinaadid asusid vees (ilmselt vigaselt sisestatud, kuna õnnetuste toimumiskoha aadressid asusid maismaal). Andmestik salvestati .rds formaadis, et tagada kiire laadimine rakenduse käivitamisel.
+    </p>
+
+    <h5>Kaardi kasutamine:</h5>
+    <p>
+        Kaardi kergemaks visuaalseks lugemiseks grupeeriti õnnetuste punktid kõigepealt klastriteks, mis jagunevad kaarti suurendades individuaalseteks markeriteks. Õnnetuste markerid on värvitud vastavalt õnnetuse raskusastmele: hukkunu(te)ga õnnetused kuvatakse <strong>punase värviga</strong>, vähemalt kahe vigastatuga õnnetused <strong>oranži värviga</strong> ning ülejäänud õnnetused <strong>sinise värviga</strong>. Andmemarkerile vajutades kuvatakse menüü õnnetuse detailandmetega.
+    </p>
+    <p>
+        Ülevalt paremalt on võimalik vahetada kaardivaate ja satelliitpildi vaate vahel. Ülevalt vasakult on võimalik kaardil sisse-välja suumida ja avada filtrite menüü.
+    </p>
+
+    <h5>Filtrid:</h5>
+    <p>
+        Kasutajal on võimalik kaarti täpselt kohandada järgmiste filtrite abil:
+    </p>
+    
+    <ul>
+        <li>Aastavahemik – vali, milliste aastate õnnetusi kaardil kuvatakse</li>
+        <li>Hukkunud – ainult õnnetused, kus keegi hukkus</li>
+        <li>Joobes juht – ainult joobes mootorsõidukijuhi osalusega õnnetused</li>
+        <li>Eakas juht (65+) – ainult õnnetused, kus osales eakas juht</li>
+        <li>Turvavarustus puudus – ainult õnnetused, kus keegi ei kasutanud turvavarustust</li>
+        <li>Sõidukite arv õnnetuses</li>
+        <li>Isikute arv õnnetuses</li>
+        <li>Maakond – piiritle võimaluse korral piirkondlikult (kuvatakse vastava maakonna õnnetused kaardil)</li>
+        <li>Ilmastik ja valgustingimused</li>
+    </ul>
+    
+    <p>
+        Filtrid kombineeruvad – kasutaja saab näiteks vaadata ainult neid õnnetusi, kus oli joobes juht, juht oli üle 65 aasta vana ning keegi ei kasutanud turvavarustust.
+    </p>
+</div>

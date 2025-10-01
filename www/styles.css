@@ -1,0 +1,41 @@
+#map-overlay {
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 450; /* Madal indeks, overlay leaflet nuppude all*/
+  display: none; /* Vaikimisi peidetud */
+}
+
+#toggle_button {
+  margin: 0px !important;
+  padding: 0px !important;
+  background-color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  border-radius: 4px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: none;
+}
+
+#toggle_button:hover {
+  background-color: #f4f4f4;
+  color: #000
+}
+
+#toggle_button:focus {
+  outline: none;
+}
+
+#toggle_button:active {
+  background-color: #f4f4f4;
+}
