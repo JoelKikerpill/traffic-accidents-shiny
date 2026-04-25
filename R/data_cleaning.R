@@ -6,11 +6,11 @@ library(stringr)
 # Lokaalne sisselugemine
 # Peidab warningud andmete sisse lugemisel
 # Juhtumi number puudu ridadel 8654 ja 20902
-# andmed <- suppressWarnings(read_delim("data/lo_2011_2025.csv", show_col_types = FALSE))
+andmed <- suppressWarnings(read.csv("data/lo_2011_2026.csv", sep = ";"))
 
 # Andmed otse veebist
 # https://andmed.eesti.ee/datasets/inimkannatanutega-liiklusonnetuste-andmed
-andmed <- read.delim("https://andmed.eesti.ee/api/datasets/d43cbb24-f58f-4928-b7ed-1fcec2ef355b/files/b0bbf1e9-d5ce-47d6-971e-10b0860026e7/download-s3", sep = ";")
+# andmed <- read.delim("https://pilv.transpordiamet.ee/s/Iiee4OAYFq4lT1v/download?path=%2F&files=lo_2011_2026.csv", sep = ";")
 
 # Juhtumi nr tulba jaoks
 options(scipen = 999)
